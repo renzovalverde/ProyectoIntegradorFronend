@@ -16,6 +16,8 @@ import { PagoComponent } from './components/pago/pago.component';
 import { SalaComponent } from './components/sala/sala.component';
 import { SalaAsientoComponent } from './components/sala-asiento/sala-asiento.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    HttpClientModule, // added  to project
+    FormsModule, // added  to project
+    ReactiveFormsModule // added  to project
   ],
   providers: [],
   bootstrap: [AppComponent]
