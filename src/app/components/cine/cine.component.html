@@ -1,1 +1,39 @@
-<p>cine works!</p>
+<form class="content" (submit)="consultaCines()">
+    <div class="submit-form">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Consulte cine de acuerdo a su ubicación</h3>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 2%">
+            <div class="col-lg-5">
+
+                <select id="idClient" name="idCliente" class="form-control" [(ngModel)]="selCiudad">
+                    <option value="0">[Seleccione]</option>
+                    <option *ngFor="let aux of ciudades" value="{{aux.idCiudad}}">
+                        {{aux.nombre}}
+                    </option>
+                </select>
+            </div>
+
+            <div class="col-lg-2">
+                <button class="btn btn-success">Buscar</button>
+            </div>
+        </div>
+        <div class="row mt-5"   >
+            <div class="col-md-4" *ngFor="let aux of cines">
+                <div class="card" style="width: 18rem;" >
+                    <a href="/Pelicula" class="btn"> <img src="{{ aux.imagen}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body" >
+                        <h5 class="card-title">{{ aux.nombre}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        <p class="card-text">{{ aux.direccion}}</p>
+                        <a href="#" class="btn btn-primary  mr-2"><i class="fas fa-link"></i> Visitar</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+    </div>
+</form>

@@ -18,6 +18,7 @@ import { SalaAsientoComponent } from './components/sala-asiento/sala-asiento.com
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegistraUsuarioComponent } from './components/registra-usuario/registra-usuario.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PagoComponent,
     SalaComponent,
     SalaAsientoComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    RegistraUsuarioComponent
   ],
   imports: [
     BrowserModule,
