@@ -8,11 +8,13 @@ import { RegistraUsuarioComponent } from './components/registra-usuario/registra
 import { CiudadComponent } from './components/ciudad/ciudad.component';
 
 
+
 const routes: Routes = [
   {path:"Usuario", component:UsuarioComponent },
   {path:"RegistraUsuario", component:RegistraUsuarioComponent },
   {path:"Pelicula", component:PeliculaComponent },
   {path:"Cine", component:CineComponent },
+
   {path:"Ciudad", component:CiudadComponent }
 
 ]; // <== newly added variable

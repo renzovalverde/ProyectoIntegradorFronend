@@ -37,7 +37,11 @@ import { RegistraUsuarioComponent } from './components/registra-usuario/registra
     SalaComponent,
     SalaAsientoComponent,
     UsuarioComponent,
+<<<<<<< HEAD
     RegistraUsuarioComponent
+=======
+    
+>>>>>>> c2582ac4eacd379320679f9decf274540cf0f492
   ],
   imports: [
     BrowserModule,
