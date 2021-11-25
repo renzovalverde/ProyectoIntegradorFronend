@@ -35,7 +35,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PagoComponent,
     SalaComponent,
     SalaAsientoComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    
   ],
   imports: [
     BrowserModule,

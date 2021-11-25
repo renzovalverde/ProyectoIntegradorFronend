@@ -6,10 +6,12 @@ import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { CineComponent } from './components/cine/cine.component';
 
 
+
 const routes: Routes = [
   {path:"Usuario", component:UsuarioComponent },
   {path:"Pelicula", component:PeliculaComponent },
-  {path:"Cine", component:CineComponent }
+  {path:"Cine", component:CineComponent },
+  
 
 ]; // <== newly added variable
 
