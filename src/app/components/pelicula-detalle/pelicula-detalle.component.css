@@ -1,0 +1,17 @@
+ #titulo-card{
+
+    background-color: blue;
+}
+.card-title{
+    font-family: cursive;
+    font-family: fantasy;
+}
+.text-muted
+{
+    color: black;
+    font-family: fantasy;
+}
+.botonComprar{
+
+    float: right;
+}

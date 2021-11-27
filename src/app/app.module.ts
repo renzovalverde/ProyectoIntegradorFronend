@@ -19,6 +19,7 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistraUsuarioComponent } from './components/registra-usuario/registra-usuario.component';
+import { PeliculaDetalleComponent } from './components/pelicula-detalle/pelicula-detalle.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { RegistraUsuarioComponent } from './components/registra-usuario/registra
     SalaComponent,
     SalaAsientoComponent,
     UsuarioComponent,
-    RegistraUsuarioComponent
+    RegistraUsuarioComponent,
+    PeliculaDetalleComponent
   ],
   imports: [
     BrowserModule,
