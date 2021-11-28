@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Cine } from '../models/cine.model';
 
 const baseUrl = 'http://localhost:8080/rest/cines';
 
@@ -16,5 +17,8 @@ export class CineService {
 
     return this.http.get(baseUrl + "/listCineByCiudad", {params});
 
+  }
+  listarTodos(): Observable<Cine[]>{
+    return this.http.get<Cine[]>(baseUrl);
   }
 }

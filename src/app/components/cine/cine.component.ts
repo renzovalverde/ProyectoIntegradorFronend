@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cartelera } from 'src/app/models/cartelera.model';
 import { Cine } from 'src/app/models/cine.model';
 import { Ciudad } from 'src/app/models/ciudad.model';
 import { CineService } from 'src/app/services/cine.service';

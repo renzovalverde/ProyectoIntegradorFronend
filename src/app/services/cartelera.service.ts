@@ -3,15 +3,22 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Cartelera } from '../models/cartelera.model';
 
-const baseUrl = 'http://localhost:8080/rest/cartelera';
+const baseUrl = 'http://localhost:8080/rest/carteleras';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarteleraService {
 
+  
   constructor(private http : HttpClient) { }
   listarTodos(): Observable<Cartelera[]>{
     return this.http.get<Cartelera[]>(baseUrl);
+  }
+  consultarXCine(){
+    
+  }
+  obtenerId(){
+
   }
 }

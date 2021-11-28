@@ -23,12 +23,13 @@
         <div class="row mt-5"   >
             <div class="col-md-4" *ngFor="let aux of cines">
                 <div class="card" style="width: 18rem;" >
-                    <a href="/Pelicula" class="btn"> <img src="{{ aux.imagen}}" class="card-img-top" alt="..."></a>
+                    <a href="/Cartelera" class="btn"> <img src="{{ aux.imagen}}" class="card-img-top" alt="..."></a>
                     <div class="card-body" >
                         <h5 class="card-title">{{ aux.nombre}}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                        
                         <p class="card-text">{{ aux.direccion}}</p>
-                        <a href="#" class="btn btn-primary  mr-2"><i class="fas fa-link"></i> Visitar</a>
+                        <a href="/Cartelera" class="btn btn-primary  mr-2"><i class="fas fa-view"></i> Visitar</a>
+                        
                         
                     </div>
                 </div>
