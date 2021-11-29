@@ -10,6 +10,7 @@ import { PeliculaDetalleComponent } from './components/pelicula-detalle/pelicula
 import { CompraComponent } from './components/compra/compra.component';
 import { DetalleCompraComponent } from './components/detalle-compra/detalle-compra.component';
 import { CarteleraComponent } from './components/cartelera/cartelera.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 
 
@@ -19,9 +20,9 @@ const routes: Routes = [
   {path:"Pelicula", component:PeliculaComponent },
   {path:"Cine", component:CineComponent },
   {path:"Ciudad", component:CiudadComponent },
-  {path:"Compra", component:CompraComponent },
+  {path:"Compra", component:CompraComponent ,canActivate:[AuthGuardService] },
   {path:"Cartelera", component:CarteleraComponent },
-  {path:"Compra-detalle", component: DetalleCompraComponent },
+  {path:"Compra-detalle", component: DetalleCompraComponent,canActivate:[AuthGuardService]},
   {path: "Pelicula-detalle" , component: PeliculaDetalleComponent}
 
 ]; // <== newly added variable

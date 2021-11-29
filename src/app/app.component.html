@@ -17,12 +17,12 @@
             <a routerLink="Pelicula" class="nav-link">Peliculas</a>
           </li>
 
-          <!-- <li class="nav-item">
+          <li class="nav-item">
             <a routerLink="Cartelera" class="nav-link">Cartelera</a>
-          </li> -->
+          </li>
 
           <li class="nav-item">
-            <a routerLink="" class="nav-link">Promociones</a>
+            <a *ngIf="loginService.isUserLoggedIn()"  routerLink="Compra" class="nav-link">Compra</a>
           </li>
 
           <li class="nav-item" style="margin-right: 30px;">
@@ -31,22 +31,24 @@
         </ul>
 
         <form class="d-flex ">
-          <input class="form-control mr-sm-2" size="50" type="search" placeholder="Buscar..." aria-label="Search" >
+          <input class="form-control mr-sm-2" size="50" type="search" placeholder="Buscar..." aria-label="Search">
           <button class="btn btn-outline-success " type="submit"><i class="fa fa-search"></i></button>
         </form>
 
       </div>
       <ul class="nav navbar-nav navbar-right">
-        <li class="nav-item" ><a routerLink="Usuario" class="nav-link">Login <i class="fa fa-user"></i></a></li>
-        <li class="nav-item" ><a routerLink="contacto" class="nav-link">Contacto <i class="fa fa-phone"></i></a></li>
+        <li class="nav-item"><a *ngIf="!loginService.isUserLoggedIn()"routerLink="Usuario" class="nav-link">Iniciar sesion <i class="fa fa-user"></i></a></li>
+        <li class="nav-item"><a *ngIf="loginService.isUserLoggedIn()"routerLink="Usuario" class="nav-link">Cerrar Sesion<i class="fas fa-sign-out-alt"></i></a></li>
+        <!--  <li class="nav-item" ><a routerLink="contacto" class="nav-link">Contacto <i class="fa fa-phone"></i></a></li>
         <li class="nav-item" ><a  routerLink="RegistraUsuario" class="nav-link">Login <i class="fa fa-user"></i></a></li>
         <li class="nav-item" ><a  routerLink="Usuario" class="nav-link">Contacto <i class="fa fa-phone"></i></a></li>
+-->
       </ul>
     </div>
   </nav>
 
   <div class="container mt-3">
     <router-outlet></router-outlet>
- 
+
   </div>
 </div>

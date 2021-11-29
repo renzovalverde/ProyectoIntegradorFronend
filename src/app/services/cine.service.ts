@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Cine } from '../models/cine.model';
@@ -19,6 +19,9 @@ export class CineService {
 
   }
   listarTodos(): Observable<Cine[]>{
+    let username='ana@gmail.com'
+    let password='admin'
+    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
     return this.http.get<Cine[]>(baseUrl);
   }
 }

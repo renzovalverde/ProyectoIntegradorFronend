@@ -16,10 +16,11 @@ import { PagoComponent } from './components/pago/pago.component';
 import { SalaComponent } from './components/sala/sala.component';
 import { SalaAsientoComponent } from './components/sala-asiento/sala-asiento.component';
 import { UsuarioComponent } from './components/usuario/usuario.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegistraUsuarioComponent } from './components/registra-usuario/registra-usuario.component';
 import { PeliculaDetalleComponent } from './components/pelicula-detalle/pelicula-detalle.component';
+import { BasicAuthHtppInterceptorServiceService } from './services/basic-auth-htpp-interceptor-service.service';
 
 
 @NgModule({
@@ -48,7 +49,7 @@ import { PeliculaDetalleComponent } from './components/pelicula-detalle/pelicula
     FormsModule, // added  to project
     ReactiveFormsModule // added  to project
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass:BasicAuthHtppInterceptorServiceService, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
