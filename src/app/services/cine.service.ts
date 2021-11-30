@@ -11,10 +11,9 @@ const baseUrl = 'http://localhost:8080/rest/cines';
 export class CineService {
 
   constructor(private http : HttpClient) { }
+  
   consultaCineXciudad( idCiudad:number): Observable<any> {
-
     const params = new HttpParams().set("idCiudad", idCiudad);
-
     return this.http.get(baseUrl + "/listCineByCiudad", {params});
 
   }

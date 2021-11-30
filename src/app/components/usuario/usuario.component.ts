@@ -19,7 +19,7 @@ export class UsuarioComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginservice.logOut();
-    this.router.navigate(['login']);
+    this.router.navigate(['Usuario']);
   }
   checkLogin() {
     (this.loginservice.authenticate(this.username, this.password).subscribe(

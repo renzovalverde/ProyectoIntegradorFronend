@@ -49,7 +49,7 @@ import { BasicAuthHtppInterceptorServiceService } from './services/basic-auth-ht
     FormsModule, // added  to project
     ReactiveFormsModule // added  to project
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass:BasicAuthHtppInterceptorServiceService, multi: true}],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
