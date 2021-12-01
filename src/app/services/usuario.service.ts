@@ -9,12 +9,7 @@ const baseUrl = 'http://localhost:8080/rest/usuarios';
 @Injectable({
   providedIn: 'root'
 })
-/*export class JwtResponse{
-  constructor(
-    public jwttoken:string,
-     ) {}
-  
-}*/
+
 export class UsuarioService {
 
   
@@ -24,7 +19,9 @@ listarUsuario():Observable<Usuario[]>{
   return this.http.get<Usuario[]>(baseUrl+"/listaUsuarios")
 }
 registrar(data:Usuario) : Observable<any>{
-  return this.http.post(baseUrl+"/registroUsuarios",data);
+  
+  this.authenticate(data.email!,data.password!);
+  return this.http.post<any>('http://localhost:8080/register',data);
 }
 
 authenticate(username:string, password:string) {
