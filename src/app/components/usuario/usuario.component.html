@@ -11,11 +11,11 @@
             <form method="post" id="singninFrom">
               <div class="form-group">
                 <label class="font-weight-bold">Email <span class="text-danger">*</span></label>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Enter valid email" required [(ngModel)]="username">
+                <input type="email" name="email" id="email" class="form-control" placeholder="XXXX@example.com" required [(ngModel)]="username">
               </div>
               <div class="form-group">
-                <label class="font-weight-bold">Password <span class="text-danger">*</span></label>
-                <input type="password" name="password" id="password" class="form-control" placeholder="***********" required [(ngModel)]="password">
+                <label class="font-weight-bold">Contraseña<span class="text-danger">*</span></label>
+                <input type="password" name="password" id="password" class="form-control" placeholder="" required [(ngModel)]="password">
               </div>
               <div class="form-group">
                 <div class="row">
@@ -38,44 +38,55 @@
               
               <div class="form-group">
                 <label class="font-weight-bold">Nombres<span class="text-danger">*</span></label>
-                <input type="text" name="signupnombre" id="signupusername" class="form-control" placeholder="Choose your user name" required [(ngModel)]="usuario.nombres">
+                <input type="text" name="signupnombre" id="signupusername" class="form-control" placeholder="Ingrese su Nombre" required [(ngModel)]="usuario.nombres">
                
               </div>
-              <div class="form-group">
-                <label class="font-weight-bold">Apellido Paterno<span class="text-danger">*</span></label>
-                <input type="text" name="signupap" id="signupusername" class="form-control" placeholder="Choose your user name" required [(ngModel)]="usuario.apaterno">
-               
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label class="font-weight-bold">Apellido Paterno<span class="text-danger">*</span></label>
+                  <input type="text" name="signupap" id="signupusername" class="form-control" placeholder="Ingrese su Apellido Paterno" required [(ngModel)]="usuario.apaterno">
+                 
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="font-weight-bold">Apellido Materno<span class="text-danger">*</span></label>
+                  <input type="text" name="signupuam" id="signupusername" class="form-control" placeholder="Ingrese su Apellido Materno" required [(ngModel)]="usuario.amaterno">
+                 
+                </div>
               </div>
-              <div class="form-group">
-                <label class="font-weight-bold">Apellido Materno<span class="text-danger">*</span></label>
-                <input type="text" name="signupuam" id="signupusername" class="form-control" placeholder="Choose your user name" required [(ngModel)]="usuario.amaterno">
-               
+              
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label class="font-weight-bold">DNI<span class="text-danger">*</span></label>
+                  <input type="text" name="signupdni" id="signupusername" class="form-control" placeholder="Ingrese DNI" required [(ngModel)]="usuario.dni">
+                 
+                </div>
+                
+                <div class="form-group col-md-8">
+                  <label class="font-weight-bold">Telefono</label>
+                  <input type="text" name="signupphone" id="signupphone" class="form-control" placeholder="(000)-(0000000)">
+                </div>
               </div>
-              <div class="form-group">
-                <label class="font-weight-bold">DNI<span class="text-danger">*</span></label>
-                <input type="text" name="signupdni" id="signupusername" class="form-control" placeholder="Choose your user name" required [(ngModel)]="usuario.dni">
-               
+              
+              
+              <div class="form-row">
+                <div class="form-group col-md-5">
+                  <label class="font-weight-bold">Usuario<span class="text-danger">*</span></label>
+                  <input type="text" name="signupusername" id="signupusername" class="form-control" placeholder="Ingrese un usuario" required [(ngModel)]="usuario.login">
+                 
+                </div>
+                <div class="form-group col-md-7">
+                  <label class="font-weight-bold">Email <span class="text-danger">*</span></label>
+                  <input type="email" name="signupemail" id="signupemail" class="form-control" placeholder=" XXXXXXX@example.com" required [(ngModel)]="usuario.email">
+                </div>
               </div>
+              
               <div class="form-group">
-                <label class="font-weight-bold">Usuario<span class="text-danger">*</span></label>
-                <input type="text" name="signupusername" id="signupusername" class="form-control" placeholder="Choose your user name" required [(ngModel)]="usuario.login">
-               
-              </div>
-              <div class="form-group">
-                <label class="font-weight-bold">Phone</label>
-                <input type="text" name="signupphone" id="signupphone" class="form-control" placeholder="(000)-(0000000)">
-              </div>
-              <div class="form-group">
-                <label class="font-weight-bold">Email <span class="text-danger">*</span></label>
-                <input type="email" name="signupemail" id="signupemail" class="form-control" placeholder="Enter valid email" required [(ngModel)]="usuario.email">
-              </div>
-              <div class="form-group">
-                <label class="font-weight-bold">Password <span class="text-danger">*</span></label>
+                <label class="font-weight-bold">Contraseña <span class="text-danger">*</span></label>
                 <input type="password" name="signuppassword" id="signuppassword" class="form-control" placeholder="" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;"
                   required [(ngModel)]="usuario.password">
               </div>
               <div class="form-group">
-                <label class="font-weight-bold">Confirm Password <span class="text-danger">*</span></label>
+                <label class="font-weight-bold">Confirmar Contraseña<span class="text-danger">*</span></label>
                 <input type="password" name="signupcpassword" id="signupcpassword" class="form-control" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="" required>
               </div>
               <div class="form-group">
@@ -105,7 +116,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Sign In</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Ingresar</button>
               <button type="submit" name="forgotPass" class="btn btn-primary"><i class="fa fa-envelope"></i> Send Request</button>
             </div>
           </div>

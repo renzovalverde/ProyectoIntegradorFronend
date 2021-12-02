@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from 'src/app/models/usuario.model';
 import { UsuarioService } from 'src/app/services/usuario.service';
-
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-usuario',
   templateUrl: './usuario.component.html',
@@ -21,7 +21,7 @@ export class UsuarioComponent implements OnInit {
    // password:this.password
   }
 
-  constructor(private router: Router, private loginservice: UsuarioService) { }
+  constructor(private router: Router, private loginservice: UsuarioService,private location: Location) { }
 
   ngOnInit(): void {
     this.loginservice.logOut();
@@ -30,15 +30,19 @@ export class UsuarioComponent implements OnInit {
   checkLogin() {
     (this.loginservice.authenticate(this.username, this.password).subscribe(
       data => {
-        this.router.navigate(['Compra'])
+       // this.router.navigate(['Compra'])
+       this.location.back()
         this.invalidLogin = false
       },
       error => {
         this.invalidLogin = true
-
+        alert("Usuario o contraseña incorrecta")
+        this.username = ""
+        this.password = ""
       }
     )
     );
+
   }
   registrar(){
     this.loginservice.registrar(this.usuario).subscribe(
@@ -51,7 +55,6 @@ export class UsuarioComponent implements OnInit {
           },
           error => {
             this.invalidLogin = true
-    
           }
         ));
         this.usuario= {

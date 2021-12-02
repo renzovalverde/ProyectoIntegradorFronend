@@ -1,4 +1,57 @@
-<ul class="nav nav-tabs" id="myTab" role="tablist">
+<form>
+
+
+    <h6 id="titulo">COMPRA DE BOLETOS </h6>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Nombres</label>
+        <input type="text" class="form-control" id="inputEmail4" placeholder="Ingrese su nombre"  required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Apellidos</label>
+        <input type="text" class="form-control" id="inputPassword4" placeholder="Ingrese su Apellido"  required>
+      </div>
+    </div>
+
+    <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputAddress">Telefono</label>
+      <input type="number" class="form-control" id="inputAddress" placeholder="Ingrese su numero de telefono" max="9"  required>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputAddress2">Dni o Carne de Extrangueria</label>
+      <input type="number" maxlength="8" class="form-control" id="inputAddress2" placeholder="Ingrese su dni o carne " max="8" required> 
+    </div>
+    <div class="form-group col-md-4">
+        <label for="inputAddress2">Cantidad de boletos</label>
+        <input type="number" class="form-control" id="inputAddress2" placeholder="0" max="2" required>
+      </div>
+      
+    <div class="form-group col-md-4">
+        <label for="inputState">Metodo de pago</label>
+        <select id="inputState" class="form-control">
+         
+          <option selected> Visa </option>
+          <option selected>Mastercard</option>
+          <option selected>Paypal</option>
+          <option selected>Selecione ... </option>
+          
+        </select>
+      </div>
+      
+      
+        </div>
+      
+    
+    
+    <button  id="botonPagar" type="submit" class="btn btn-primary">Pagar</button>
+    
+    <button   id="botonCancelar" type="submit" class="btn btn-danger" routerLink="pelicula">Cancelar</button>
+  </form>
+
+
+<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="color: black;">EN ESTRENO</a>
     </li>
@@ -161,3 +214,4 @@
     </div>
     
   </div>
+-->
